@@ -59,7 +59,7 @@ public abstract class Task {
 
     @Override
     public String toString() {
-        return id + " " + title + '\n' + description + '\n' + (isWork ? "Рабочая" : "Не рабочая") + '\n' + dateTime;
+        return id + " " + title + '\n' + description + '\n' + (isWork ? "Рабочая" : "Задача удалена") + '\n' + dateTime;
 
     }
 }

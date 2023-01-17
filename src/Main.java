@@ -46,13 +46,9 @@ public class Main {
             String description = scanner.nextLine();
             boolean isWork;
             System.out.println("Задача в работе? ");
-            switch (scanner.nextLine()) {
+            switch (scanner.nextLine().toLowerCase()) {
                 case "да":
                 case "yes":
-                case "Да":
-                case "Yes":
-                case "ДА":
-                case "YES":
                     isWork = true;
                     break;
                 default:
@@ -82,12 +78,16 @@ public class Main {
                     break;
                 case "2":
                     task = new WeeklyTask(title, description, isWork, date);
+                    break;
                 case "3":
                     task = new MonthlyTask(title, description, isWork, date);
+                    break;
                 case "4":
                     task = new YearlyTask(title, description, isWork, date);
+                    break;
                 default:
                     task = new SingleTask(title, description, isWork, date);
+                    break;
             }
             calendar.addTask(task);
         }
